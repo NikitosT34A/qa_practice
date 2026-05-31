@@ -12,3 +12,9 @@ def users_response():
 @pytest.fixture
 def single_user_response():
     return requests.get(f"{BASE_URL}/users/1")
+
+@pytest.fixture
+def api_get():
+    def _get(endpoint):
+        return requests.get(f"{BASE_URL}{endpoint}")
+    return _get
