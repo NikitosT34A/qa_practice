@@ -22,3 +22,14 @@ def test_delete_post():
 
     assert response.status_code == 200
     assert response.json() == {}
+
+
+def test_patch_post():
+    patch_data = {
+        "title": "Только заголовок изменился"
+    }
+
+    response = requests.patch(f"{BASE_URL}/posts/1", json=patch_data)
+
+    assert response.status_code == 200
+    assert response.json()["title"] == "Только заголовок изменился"
