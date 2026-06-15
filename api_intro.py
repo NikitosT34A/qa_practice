@@ -8,4 +8,4 @@ print("Первый пользователь:", response.json()[0]["name"])
 
 print(type(response.text))   # <class 'str'>
 print(type(response.json())) # <class 'list'>
-print(response.text)
+#print(response.text)
