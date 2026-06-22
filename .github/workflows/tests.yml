@@ -22,3 +22,7 @@ jobs:
       - name: Run tests
         run: |
           pytest -v
+
+      - name: Install dependencies
+        run: |
+          pip install pytest requests allure-pytest
